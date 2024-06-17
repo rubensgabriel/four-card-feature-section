@@ -1,0 +1,159 @@
+:root {
+    /*Primary*/
+
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /*Neutral*/
+
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins';
+    text-align: center;
+    background-color: var(--veryLightGray);
+}
+
+h1 {
+    font-weight: 200;
+    color: var(--veryDarkBlue);
+    margin: 30px 0 0;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 2.2em;
+    color: var(--veryDarkBlue);
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    color: var(--grayishBlue);
+    font-size: 15px;
+}
+
+#main-text {
+    max-width: 570px;
+    font-size: 17px;
+    margin: 20px auto 40px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background-color: var(--veryLightGray);
+    max-width: 360px;
+    padding: 10px 30px 30px;
+    border-radius: 6px;
+    text-align: left;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.151);
+    color: var(--veryDarkBlue);
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-1 {
+    border-top: 4px solid var(--cyan);
+    grid-row: 1 / span 2;
+}
+
+.card-2 {
+    border-top: 4px solid var(--red);
+    grid-column: 2;
+}
+
+.card-3 {
+    border-top: 4px solid var(--orange);
+    grid-column: 2;
+}
+
+.card-4 {
+    border-top: 4px solid var(--blue);
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+img {
+    width: 70px;
+    margin-top: 10px;
+    float: right;
+}
+
+@media (max-width: 1000px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        margin: 0 30px;
+    }
+
+    .card-1 {
+        grid-row: 1;
+    }
+    
+    .card-2 {
+        grid-column: 2;
+    }
+    
+    .card-3 {
+        grid-column: 2;
+    }
+    
+    .card-4 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        margin: 25px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #main-text {
+        font-size: 15px;
+    }
+
+    img {
+        width: 60px;
+    }
+}
